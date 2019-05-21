@@ -43,10 +43,29 @@
       </section>
     </main>
     <footer class="main-footer">
+      <section class="modal write-us">
+        <h2>Напишите нам</h2>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="name-field">Ваше имя:</label>
+            <input id="name-field" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="mail-field">Ваш e-mail:</label>
+            <input id="mail-field" type="text" name="e-mail" placeholder="email@examle.com">
+          </p>
+          <p>
+            <label for="message-field">Текст письма</label>
+            <textarea id="message-field" name="message" cols="80" rows="7" placeholder="В свободной форме"></textarea>
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+        <button class="button" type="button">Закрыть</button>
+      </section>
       <ul class="footer-social">
-        <li><a class="social-button vk" href="https://vk.com"></a></li>
-        <li><a class="social-button fb" href="https://facebook.com"></a></li>
-        <li><a class="social-button insta" href="https://instagram.com"></a></li>
+        <li><a class="social-button vk" href="https://vk.com" aria-label="Вконтакте"></a></li>
+        <li><a class="social-button fb" href="https://facebook.com" aria-label="Фейсбук"></a></li>
+        <li><a class="social-button insta" href="https://instagram.com" aria-label="Инстаграм"></a></li>
       </ul>
       <div class="lets-be-friends">
         <b>Давайте дружить, это выгодно!</b>
