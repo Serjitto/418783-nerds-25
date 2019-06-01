@@ -1,4 +1,5 @@
 body {
+    width: 1440px;
     margin: 0;
     padding: 0;
 
@@ -6,16 +7,32 @@ body {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    /* border: 2px solid green; */
 }
 
 a {
     text-decoration: none;
 }
 
-.main-navigation {
-    font-weight: 500;
-    text-transform: uppercase;
+.main-header {
     background-color: #eeeeee;
+}
+
+.main-navigation {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    border: 1px solid red;
+}
+
+.main-header-logo {
+    margin-top: 49px;
+    margin-right: 202px;
+    border: 1px solid blue;
 }
 
 .logotype:hover {
@@ -27,8 +44,13 @@ a {
 }
 
 .site-navigation {
+    display: flex;
+    justify-content: space-between;
     list-style: none;
+    width: 440px;
     padding: 0;
+    margin: 0;
+    margin-top: 74px;
 }
 
 .site-navigation a {
@@ -50,6 +72,13 @@ a {
     opacity: 1;
 }
 
+.basket {
+    width: 74px;
+    margin-left: auto;
+    margin-top: 74px;
+    border: 1px solid blue;
+}
+
 .basket a {
     color: #000000;
 }
@@ -69,8 +98,26 @@ a {
 }
 
 .service-list {
+    margin-top: 650px;
+    display: flex;
+    width: 1015px;
+    margin-left: 141px;
     list-style: none;
     padding: 0;
+}
+
+.service-list-item:first-child {
+    width: 250px;
+    margin-right: 150px;
+}
+
+.service-list-item:nth-child(2) {
+    width: 238px;
+    margin-right: 160px;
+}
+
+.service-list-item:last-child {
+    width: 213px;
 }
 
 .service-list-item-header {
@@ -78,10 +125,12 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     line-height: 30px;
+    margin-bottom: 11px;
 }
 
 .service-list-item-description {
     color: #283136;
+    margin-bottom: 30px;
 }
 
 .button {
