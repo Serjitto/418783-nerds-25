@@ -10,62 +10,47 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс"></a>
-        <ul class="site-navigation">
-          <li><a href="#">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <p class="basket">
-          <a href="#">Корзина</a>
-        </p>
+        <div class="container">
+          <a class="main-header-logo"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс"></a>
+          <ul class="site-navigation">
+            <li><a href="#">Студия</a></li>
+            <li><a href="#">Клиенты</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <p class="basket">
+            <a href="#">Корзина</a>
+          </p>
+        </div>
       </nav>
     </header>
     <main class="main-container">
       <h1 class="visually-hidden">дизайн-студия Нёрдс</h1>
       <section class="services">
-        <h2 class="visually-hidden">Услуги</h2>
-        <ul class="service-list">
-          <li class="service-list-item">
-            <h3 class="service-list-item-header">Веб-сайты</h3>
-            <p class="service-list-item-description">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            <a class="button red-button" href="#">Заказать</a>
-          </li>
-          <li class="service-list-item">
-            <h3 class="service-list-item-header">Приложения</h3>
-            <p class="service-list-item-description">Покорите топ-10 приложений в AppStore и Google Play</p>
-            <a class="button green-button" href="#">Заказать</a>
-          </li>
-          <li class="service-list-item">
-            <h3 class="service-list-item-header">Презентации</h3>
-            <p class="service-list-item-description">Вы даже не подозреваете, насколько вы изумительны!</p>
-            <a class="button yellow-button" href="#">Заказать</a>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="visually-hidden">Услуги</h2>
+          <ul class="service-list">
+            <li class="service-list-item red">
+              <h3 class="service-list-item-header">Веб-сайты</h3>
+              <p class="service-list-item-description">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+              <a class="button red-button" href="#">Заказать</a>
+            </li>
+            <li class="service-list-item green">
+              <h3 class="service-list-item-header">Приложения</h3>
+              <p class="service-list-item-description">Покорите топ-10 приложений в AppStore и Google Play</p>
+              <a class="button green-button" href="#">Заказать</a>
+            </li>
+            <li class="service-list-item yellow">
+              <h3 class="service-list-item-header">Презентации</h3>
+              <p class="service-list-item-description">Вы даже не подозреваете, насколько вы изумительны!</p>
+              <a class="button yellow-button" href="#">Заказать</a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer class="main-footer">
-      <section class="modal write-us">
-        <h2>Напишите нам</h2>
-        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <label for="name-field">Ваше имя:</label>
-            <input id="name-field" type="text" name="name" placeholder="Имя Фамилия">
-          </p>
-          <p>
-            <label for="mail-field">Ваш e-mail:</label>
-            <input id="mail-field" type="text" name="e-mail" placeholder="email@examle.com">
-          </p>
-          <p>
-            <label for="message-field">Текст письма</label>
-            <textarea id="message-field" name="message" cols="80" rows="7" placeholder="В свободной форме"></textarea>
-          </p>
-          <button class="button" type="submit">Отправить</button>
-        </form>
-        <button class="button" type="button">Закрыть</button>
-      </section>
-      <div class="wrapper">
+      <div class="container">
         <ul class="footer-social">
           <li><a class="social-button" href="https://vk.com" aria-label="Вконтакте"><div class="vk"></div></a></li>
           <li><a class="social-button" href="https://facebook.com" aria-label="Фейсбук"><div class="fb"></div></a></li>
@@ -77,5 +62,24 @@
         </div>
       </div>
     </footer>
+    <section class="modal write-us">
+      <h2>Напишите нам</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="name-field">Ваше имя:</label>
+          <input id="name-field" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="mail-field">Ваш e-mail:</label>
+          <input id="mail-field" type="text" name="e-mail" placeholder="email@examle.com">
+        </p>
+        <p>
+          <label for="message-field">Текст письма</label>
+          <textarea id="message-field" name="message" cols="80" rows="7" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="button" type="button">Закрыть</button>
+    </section>
   </body>
 </html>
