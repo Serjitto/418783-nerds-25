@@ -7,7 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="inner-page">
+  <body class="inner-page page-1">
     <header class="main-header">
       <nav class="main-navigation">
         <div class="container">
@@ -30,45 +30,61 @@
         <section class="filters">
           <h2 class="visually-hidden">Фильтр шаблонов</h2>
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset>
+            <fieldset class="price-filter">
+              <legend>Стоимость:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                  <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="grid-filter">
               <legend>Сетка:</legend>
               <ul class="grid-list">
                 <li>
-                  <input id="adaptive-grid" type="radio" name="grids" value="adaptive">
-                  <label for="adaptive-grid">Адаптивная</label>
+                  <input class="grid-radio visually-hidden" id="adaptive-grid" type="radio" name="grid" value="adaptive">
+                  <label class="adaptive" for="adaptive-grid">Адаптивная</label>
                 </li>
                 <li>
-                  <input id="fixed-grid" type="radio" name="grids" value="fixed">
-                  <label for="fixed-grid">Фиксированная</label>
+                  <input class="grid-radio visually-hidden" id="fixed-grid" type="radio" name="grid" value="fixed">
+                  <label class="fixed" for="fixed-grid">Фиксированная</label>
                 </li>
                 <li>
-                  <input id="rubber-grid" type="radio" name="grids" value="rubber">
-                  <label for="rubber-grid">Резиновая</label>
+                  <input class="grid-radio visually-hidden" id="rubber-grid" type="radio" name="grid" value="rubber">
+                  <label class="rubber" for="rubber-grid">Резиновая</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="features-filter">
               <legend>Особенности:</legend>
               <ul class="features-list">
                 <li>
-                  <input id="slider-checkbox" type="checkbox" name="slider">
-                  <label for="slider-checkbox">Слайдер</label>
+                  <input class="features-checkbox visually-hidden" id="slider-checkbox" type="checkbox" name="slider">
+                  <label class="slider" for="slider-checkbox">Слайдер</label>
                 </li>
                 <li>
-                  <input id="advantages-checkbox" type="checkbox" name="advantages">
-                  <label for="advantages-checkbox">Блок преимуществ</label>
+                  <input class="features-checkbox visually-hidden" id="advantages-checkbox" type="checkbox" name="advantages">
+                  <label class="advantages" for="advantages-checkbox">Блок преимуществ</label>
                 </li>
                 <li>
-                  <input id="news-checkbox" type="checkbox" name="news">
-                  <label for="news-checkbox">Новости</label>
+                  <input class="features-checkbox visually-hidden" id="news-checkbox" type="checkbox" name="news">
+                  <label class="news" for="news-checkbox">Новости</label>
                 </li>
                 <li>
-                  <input id="gallery-checkbox" type="checkbox" name="gallery">
-                  <label for="gallery-checkbox">Галерея</label>
+                  <input class="features-checkbox visually-hidden" id="gallery-checkbox" type="checkbox" name="gallery">
+                  <label class="gallery" for="gallery-checkbox">Галерея</label>
                 </li>
                 <li>
-                  <input id="basket-checkbox" type="checkbox" name="basket">
-                  <label for="basket-checkbox">Корзина</label>
+                  <input class="features-checkbox visually-hidden" id="basket-checkbox" type="checkbox" name="basket">
+                  <label class="cart" for="basket-checkbox">Корзина</label>
                 </li>
               </ul>
             </fieldset>
@@ -77,6 +93,18 @@
         </section>
         <section class="templates">
           <h2 class="visually-hidden">Каталог шаблонов</h2>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <div class="sort-filter">
+              <span>сортировать:</span>
+              <ul class="sort-types-list">
+                <li><button type="submit">по цене</button></li>
+                <li><button type="submit">по типу</button></li>
+                <li><button type="submit">по названию</button></li>
+              </ul>
+              <button class="sort-button down" type="submit">по убыванию</button>
+              <button class="sort-button up" type="submit">по возрастанию</button>
+            </div>
+          </form>
           <ul class="templates-list">
             <li class="templates-list-item sedona">
               <a href="#" aria-label="Седона. Информационный сайт для туристов">
@@ -151,6 +179,13 @@
               </div>
             </li>
           </ul>
+          <ul class="pages-list">
+            <li class="pages-list-item"><a class="previous-page" href="#">предыдущая</a></li>
+            <li class="pages-list-item"><a class="first-page" href="#">1</a></li>
+            <li class="pages-list-item"><a class="second-page" href="#">2</a></li>
+            <li class="pages-list-item"><a class="third-page" href="#">3</a></li>
+            <li class="pages-list-item"><a class="next-page" href="#">следующая</a></li>
+          </ul>
         </section>
       </div>
     </main>
@@ -181,24 +216,26 @@
         </div>
       </div>
     </footer>
-    <section class="modal write-us">
-      <h2>Напишите нам</h2>
+    <section class="modal">
+      <h2 class="modal-header">Напишите нам</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="name-field">Ваше имя:</label>
-          <input id="name-field" type="text" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="mail-field">Ваш e-mail:</label>
-          <input id="mail-field" type="text" name="e-mail" placeholder="email@examle.com">
-        </p>
-        <p>
-          <label for="message-field">Текст письма</label>
-          <textarea id="message-field" name="message" cols="80" rows="7" placeholder="В свободной форме"></textarea>
-        </p>
-        <button class="button" type="submit">Отправить</button>
+        <div class="input-field">
+          <p>
+            <span><label for="name-field">Ваше имя:</label></span>
+            <input class="name" id="name-field" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <span><label for="mail-field">Ваш e-mail:</label></span>
+            <input class="e-mail" id="mail-field" type="text" name="e-mail" placeholder="email@examle.com">
+          </p>
+          <p>
+            <span><label for="message-field">Текст письма</label></span>
+            <textarea class="message" id="message-field" name="message" cols="80" rows="7" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
+        <button class="send-button" type="submit">Отправить</button>
       </form>
-      <button class="button" type="button">Закрыть</button>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>

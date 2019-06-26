@@ -30,9 +30,9 @@
         <div class="container">
           <h2 class="visually-hidden">Преимущества</h2>
           <div class="slider-controls">
-            <span></span>
-            <span></spab>
-            <span class="active"></span>
+            <i></i>
+            <i></i>
+            <i class="active"></i>
           </div>
           <ul class="slider-list">
             <li class="slider-item">
@@ -147,24 +147,26 @@
         </div>
       </div>
     </footer>
-    <section class="modal write-us">
-      <h2>Напишите нам</h2>
+    <section class="modal">
+      <h2 class="modal-header">Напишите нам</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="name-field">Ваше имя:</label>
-          <input id="name-field" type="text" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="mail-field">Ваш e-mail:</label>
-          <input id="mail-field" type="text" name="e-mail" placeholder="email@examle.com">
-        </p>
-        <p>
-          <label for="message-field">Текст письма</label>
-          <textarea id="message-field" name="message" cols="80" rows="7" placeholder="В свободной форме"></textarea>
-        </p>
-        <button class="button" type="submit">Отправить</button>
+        <div class="input-field">
+          <p>
+            <span><label for="name-field">Ваше имя:</label></span>
+            <input class="name" id="name-field" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <span><label for="mail-field">Ваш e-mail:</label></span>
+            <input class="e-mail" id="mail-field" type="text" name="e-mail" placeholder="email@examle.com">
+          </p>
+          <p>
+            <span><label for="message-field">Текст письма:</label></span>
+            <textarea class="message" id="message-field" name="message" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
+        <button class="send-button" type="submit">Отправить</button>
       </form>
-      <button class="button" type="button">Закрыть</button>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
