@@ -6,6 +6,17 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!-- <style>
+      @keyframes animation {
+        0% { transform: scale(0); }
+        100% { transform: scale(1); }
+      }
+      .modal-show {
+        display: block;
+        animation-name: animation;
+        animation-duration: 0.5s;
+      }
+    </style> -->
   </head>
   <body class="inner-page page-1">
     <header class="main-header">
@@ -50,7 +61,7 @@
               <legend>Сетка:</legend>
               <ul class="grid-list">
                 <li>
-                  <input class="grid-radio visually-hidden" id="adaptive-grid" type="radio" name="grid" value="adaptive">
+                  <input class="grid-radio visually-hidden" id="adaptive-grid" type="radio" name="grid" value="adaptive" checked>
                   <label class="adaptive" for="adaptive-grid">Адаптивная</label>
                 </li>
                 <li>
@@ -67,7 +78,7 @@
               <legend>Особенности:</legend>
               <ul class="features-list">
                 <li>
-                  <input class="features-checkbox visually-hidden" id="slider-checkbox" type="checkbox" name="slider">
+                  <input class="features-checkbox visually-hidden" id="slider-checkbox" type="checkbox" name="slider" checked>
                   <label class="slider" for="slider-checkbox">Слайдер</label>
                 </li>
                 <li>
@@ -75,7 +86,7 @@
                   <label class="advantages" for="advantages-checkbox">Блок преимуществ</label>
                 </li>
                 <li>
-                  <input class="features-checkbox visually-hidden" id="news-checkbox" type="checkbox" name="news">
+                  <input class="features-checkbox visually-hidden" id="news-checkbox" type="checkbox" name="news" checked>
                   <label class="news" for="news-checkbox">Новости</label>
                 </li>
                 <li>
@@ -97,11 +108,11 @@
             <div class="sort-filter">
               <span>сортировать:</span>
               <ul class="sort-types-list">
-                <li><button type="submit">по цене</button></li>
+                <li><button class="active-item" type="submit">по цене</button></li>
                 <li><button type="submit">по типу</button></li>
                 <li><button type="submit">по названию</button></li>
               </ul>
-              <button class="sort-button down" type="submit">по убыванию</button>
+              <button class="sort-button down active-item" type="submit">по убыванию</button>
               <button class="sort-button up" type="submit">по возрастанию</button>
             </div>
           </form>
@@ -112,7 +123,7 @@
               </a>
               <div class="flyout-element">
                 <div class="center">
-                  <h3 class="template-header">sedona</h3>
+                  <h3 class="template-header"><a href="#">sedona</a></h3>
                   <p class="template-description">Информационный сайт для туристов</p>
                   <a class="template-button" href="#">9 900 руб.</a>
                 </div>
@@ -124,7 +135,7 @@
               </a>
               <div class="flyout-element">
                 <div class="center">
-                  <h3 class="template-header">pink app</h3>
+                  <h3 class="template-header"><a href="#">pink app</a></h3>
                   <p class="template-description">Продуктовый лендинг приложения для iOS и Android</p>
                   <a class="template-button" href="#">9 900 руб.</a>
                 </div>
@@ -136,7 +147,7 @@
               </a>
               <div class="flyout-element">
                 <div class="center">
-                  <h3 class="template-header">barbershop</h3>
+                  <h3 class="template-header"><a href="#">barbershop</a></h3>
                   <p class="template-description">Сайт салона красоты. Для мужчин, да.</p>
                   <a class="template-button" href="#">9 900 руб.</a>
                 </div>
@@ -148,7 +159,7 @@
               </a>
               <div class="flyout-element">
                 <div class="center">
-                  <h3 class="template-header">mishka</h3>
+                  <h3 class="template-header"><a href="#">mishka</a></h3>
                   <p class="template-description">Интернет-магазин вязаных игрушек</p>
                   <a class="template-button" href="#">9 900 руб.</a>
                 </div>
@@ -160,7 +171,7 @@
               </a>
               <div class="flyout-element">
                 <div class="center">
-                  <h3 class="template-header">a plus</h3>
+                  <h3 class="template-header"><a href="#">a-plus</a></h3>
                   <p class="template-description">Лендинг курсов повышения квалификации</p>
                   <a class="template-button" href="#">9 900 руб.</a>
                 </div>
@@ -172,7 +183,7 @@
               </a>
               <div class="flyout-element">
                 <div class="center">
-                  <h3 class="template-header">Кваст</h3>
+                  <h3 class="template-header"><a href="#">Кваст</a></h3>
                   <p class="template-description">Промо-сайт производителя крафтового кваса</p>
                   <a class="template-button" href="#">9 900 руб.</a>
                 </div>
@@ -192,9 +203,10 @@
     <footer class="main-footer">
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
+        <img src="img/map.png" width="1200px" height="416px" alt="Схема проезда">
         <div class="container">
           <div class="our-address">
-            <h3 class="our-address-header">nёrds design studio</h1>
+            <h3 class="our-address-header">nёrds design studio</h3>
             <p class="address">
               191186, Санкт-Петербург,<br>
               ул. Б. Конюшенная, д. 19/8
@@ -204,11 +216,11 @@
           </div>
         </div>
       </section>
-      <div class="container">
+      <div class="container social-wrapper">
         <ul class="footer-social">
-          <li><a class="social-button" href="https://vk.com" aria-label="Вконтакте"><div class="vk"></div></a></li>
-          <li><a class="social-button" href="https://facebook.com" aria-label="Фейсбук"><div class="fb"></div></a></li>
-          <li><a class="social-button" href="https://instagram.com" aria-label="Инстаграм"><div class="insta"></div></a></li>
+          <li><a class="social-button vk" href="https://vk.com" aria-label="Вконтакте"></a></li>
+          <li><a class="social-button fb" href="https://facebook.com" aria-label="Фейсбук"></a></li>
+          <li><a class="social-button insta" href="https://instagram.com" aria-label="Инстаграм"></a></li>
         </ul>
         <div class="lets-be-friends">
           <b>Давайте дружить, это выгодно!</b>
@@ -216,20 +228,20 @@
         </div>
       </div>
     </footer>
-    <section class="modal">
+    <section class="modal write-us">
       <h2 class="modal-header">Напишите нам</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="input-field">
-          <p>
-            <span><label for="name-field">Ваше имя:</label></span>
+        <div class="inner-form">
+          <p class="name-field">
+            <label for="name-field">Ваше имя:</label>
             <input class="name" id="name-field" type="text" name="name" placeholder="Имя Фамилия">
           </p>
-          <p>
-            <span><label for="mail-field">Ваш e-mail:</label></span>
-            <input class="e-mail" id="mail-field" type="text" name="e-mail" placeholder="email@examle.com">
+          <p class="mail-field">
+            <label for="mail-field">Ваш e-mail:</label>
+            <input class="email" id="mail-field" type="email" name="email" placeholder="email@examle.com">
           </p>
-          <p>
-            <span><label for="message-field">Текст письма</label></span>
+          <p class="message-field">
+            <label for="message-field">Текст письма</label>
             <textarea class="message" id="message-field" name="message" cols="80" rows="7" placeholder="В свободной форме"></textarea>
           </p>
         </div>
@@ -237,5 +249,30 @@
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
+    <script>
+      var link = document.querySelector(".contacts-button");
+      var popup = document.querySelector(".write-us");
+      var close = document.querySelector(".modal-close");
+      var form = popup.querySelector(".feedback-form");
+      var name = popup.querySelector(".name");
+      var mail = popup.querySelector(".email");
+
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+      });
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+      });
+      form.addEventListener("submit", function (evt) {
+        if (!name.value || !mail.value || !message.value) {
+          evt.preventDefault();
+          popup.classList.remove("modal-error");
+          popup.classList.add("modal-error");
+        }
+      });
+    </script>
   </body>
 </html>
