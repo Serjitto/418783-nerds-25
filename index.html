@@ -5,7 +5,7 @@
     <title>дизайн-студия Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -76,7 +76,6 @@
         </div>
       </section>
       <section class="about-us">
-        <!-- <hr class="horizontal-line"> -->
         <div class="container">
           <div class="about-us-description">
             <b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
@@ -108,7 +107,6 @@
         </div>
       </section>
       <section class="partners">
-        <!-- <hr class="horizontal-line"> -->
         <div class="container">
           <ul class="partners-list">
             <li class="partner-list-item html-academy"><a href="https://htmlacademy.ru"></a></li>
@@ -117,7 +115,6 @@
             <li class="partner-list-item mishka"><a href="#"></a></li>
           </ul>
         </div>
-        <!-- <hr class="horizontal-line"> -->
       </section>
     </main>
     <footer class="main-footer">
@@ -169,62 +166,6 @@
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
-    <script>
-      var tumbler1 = document.querySelector(".tumbler-1");
-      var tumbler2 = document.querySelector(".tumbler-2");
-      var tumbler3 = document.querySelector(".tumbler-3");
-      var slide1 = document.querySelector(".slide-1");
-      var slide2 = document.querySelector(".slide-2");
-      var slide3 = document.querySelector(".slide-3");
-
-      var link = document.querySelector(".contacts-button");
-      var popup = document.querySelector(".write-us");
-      var close = document.querySelector(".modal-close");
-      var form = popup.querySelector(".feedback-form");
-      var name = popup.querySelector(".name");
-      var mail = popup.querySelector(".email");
-
-      tumbler1.addEventListener("click", function (evt) {
-        tumbler2.classList.remove("active");
-        tumbler3.classList.remove("active");
-        slide2.classList.remove("slide-show");
-        slide3.classList.remove("slide-show");
-        tumbler1.classList.add("active");
-        slide1.classList.add("slide-show");
-      })
-      tumbler2.addEventListener("click", function (evt) {
-        tumbler1.classList.remove("active");
-        tumbler3.classList.remove("active");
-        slide1.classList.remove("slide-show");
-        slide3.classList.remove("slide-show");
-        tumbler2.classList.add("active");
-        slide2.classList.add("slide-show");
-      });
-      tumbler3.addEventListener("click", function (evt) {
-        tumbler1.classList.remove("active");
-        tumbler2.classList.remove("active");
-        slide1.classList.remove("slide-show");
-        slide2.classList.remove("slide-show");
-        tumbler3.classList.add("active");
-        slide3.classList.add("slide-show");
-      });
-
-      link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-      });
-      close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-        popup.classList.remove("modal-error");
-      });
-      form.addEventListener("submit", function (evt) {
-        if (!name.value || !mail.value || !message.value) {
-          evt.preventDefault();
-          popup.classList.remove("modal-error");
-          popup.classList.add("modal-error");
-        }
-      });
-    </script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
