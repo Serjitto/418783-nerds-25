@@ -11,6 +11,7 @@ var close = document.querySelector(".modal-close");
 var form = popup.querySelector(".feedback-form");
 var name = popup.querySelector(".name");
 var mail = popup.querySelector(".email");
+var message = popup.querySelector(".message");
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -25,6 +26,7 @@ form.addEventListener("submit", function (evt) {
   if (!name.value || !mail.value || !message.value) {
     evt.preventDefault();
     popup.classList.remove("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("modal-error");
   }
 });
