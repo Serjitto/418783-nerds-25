@@ -284,11 +284,6 @@ a {
 }
 
 .market {
-  /* position: absolute;
-  width: 726px;
-  top: 155px;
-  left: 50%;
-  transform: translateX(-50%); */
   margin: 0;
   font-weight: 500;
   font-size: 55px;
@@ -1241,21 +1236,16 @@ a {
 .contacts {
   margin-top: 78px;
   height: 416px;
-  position: relative;
+  background-color: #f1efe8;
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-position: 50% 42%;
+  background-size: cover;
   border: 1px solid #ffffff;
 }
 
 .inner-page .contacts {
   margin-top: 60px;
-}
-
-.contacts img {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
 }
 
 .our-address {
