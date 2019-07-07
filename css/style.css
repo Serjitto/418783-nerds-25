@@ -151,6 +151,7 @@ a {
   position: relative;
   
   display: inline-block;
+  vertical-align: top;
   width: 18px;
   height: 18px;
   padding: 0;
@@ -1241,11 +1242,24 @@ a {
   background-repeat: no-repeat;
   background-position: 50% 42%;
   background-size: cover;
-  border: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  position: relative;
 }
 
 .inner-page .contacts {
   margin-top: 60px;
+}
+
+.contacts iframe {
+  position: absolute;
+  top: 0;
+  border: none;
+  width: 100%;
+}
+
+.address-wrapper {
+  position: relative;
+  z-index: 2;
 }
 
 .our-address {
@@ -1270,6 +1284,7 @@ a {
 }
 
 .our-address p {
+  width: 200px;
   margin-bottom: 17px;
   line-height: 18px;
   color: #666666;
@@ -1301,11 +1316,11 @@ a {
 
 .social-wrapper {
   display: flex;
-  padding: 53px 20px 52px;
+  padding: 54px 20px 52px;
 }
 
 .inner-page .social-wrapper {
-  padding: 52px 20px;
+  padding: 53px 20px 52px;
 }
 
 .footer-social {
